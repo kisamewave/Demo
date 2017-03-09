@@ -10,7 +10,19 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Demo");
+
+            PokemonContainer p = new PokemonContainer();
+            p.ShowC();
+            Console.WriteLine("Podaj wartosc: ");
+            int value = int.Parse(Console.ReadLine());
+            p.DeleteP(value);
+            Console.Clear();
+            p.ShowC();
+            Console.ReadLine();
+            p.AddP();
+            p.ShowC();
+            Console.ReadLine();
+
         }
     }
 }
