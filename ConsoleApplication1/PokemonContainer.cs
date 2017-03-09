@@ -37,13 +37,22 @@ namespace ConsoleApplication1
 
         public void AddP()
         {
+            //name hp ata def typ
+            Console.WriteLine("Podaj imie: ");
+            string i = Console.ReadLine();
+            Console.WriteLine("Podaj hp: ");
+            int hp = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj atak: ");
+            int at = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj def: ");
+            int def = int.Parse(Console.ReadLine());
+            Console.WriteLine("Podaj typ: ");
+            string typ = Console.ReadLine();
 
-            pokeList.Add(new Pokemon(
-                Console.ReadLine(), 
-                int.Parse(Console.ReadLine()), 
-                int.Parse(Console.ReadLine()),
-                int.Parse(Console.ReadLine()), 
-                Console.ReadLine()));
+            //musze stworzyc instancje obiektu pokemon i wskazac wejscie
+            Pokemon p = new Pokemon(i,hp,at,def,typ);
+
+            pokeList.Add(p);
             Console.Clear();
 
 

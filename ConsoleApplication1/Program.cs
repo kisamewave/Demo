@@ -12,16 +12,46 @@ namespace ConsoleApplication1
         {
 
             PokemonContainer p = new PokemonContainer();
-            p.ShowC();
-            Console.WriteLine("Podaj wartosc: ");
-            int value = int.Parse(Console.ReadLine());
-            p.DeleteP(value);
-            Console.Clear();
-            p.ShowC();
-            Console.ReadLine();
-            p.AddP();
-            p.ShowC();
-            Console.ReadLine();
+
+            while (true)
+            {
+
+
+
+                try
+                {
+                    p.AddP();
+                }
+                catch (Exception ex)
+                {
+
+                    Console.WriteLine(ex.ToString());
+                }
+
+                p.ShowC();
+
+                Console.WriteLine("Podaj numer pokemona: ");
+
+                try
+                {
+                    int index = int.Parse(Console.ReadLine());
+                    p.DeleteP(index);
+                    p.ShowC();
+                    Console.ReadLine();
+                }
+                catch (Exception e)
+                {
+
+                    Console.WriteLine(e.ToString());
+                }
+              
+
+               
+                
+
+                
+            }
+
 
         }
     }
